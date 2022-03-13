@@ -65,6 +65,27 @@
     transform: scale(1,1);
     transform-origin: botttom left; 
   }
+
+  .contact-me a::before {  
+    /* This is for the hover underline */
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform:scale(0,1);
+    /* this shows the line on the x or y axis. here the x axis is not showing up but when you hover it will turn into a 1 and show up. */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(191 27 53);
+    transform-origin: bottom left;
+    /* The line starts from the bottom left */
+    transition: transform 0.25s ease-out;
+  }
+  .contact-me a:hover::before {
+    transform: scale(1,1);
+    transform-origin: botttom left; 
+  }
+  
   
   .header {
     background: linear-gradient(to bottom left, rgb(191 27 53), black);
